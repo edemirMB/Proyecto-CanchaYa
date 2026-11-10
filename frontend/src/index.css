@@ -1,0 +1,424 @@
+/* CanchaYa - Estilos Globales Deportivos de Alto Contraste */
+:root {
+  --cy-green-primary: #10b981;
+  --cy-green-dark: #059669;
+  --cy-green-darker: #047857;
+  --cy-green-light: #ecfdf5;
+  --cy-green-subtle: #d1fae5;
+  --cy-dark-nav: #0f172a;
+  --cy-dark-card: #1e293b;
+  --cy-text-dark: #0f172a;
+  --cy-text-body: #1e293b;
+  --cy-text-muted: #334155;
+  --cy-text-secondary: #475569;
+  --cy-bg-body: #f8fafc;
+  --cy-border: #cbd5e1;
+  --cy-accent: #d97706;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--cy-bg-body);
+  color: var(--cy-text-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Tipografías y Encabezados - Alto Contraste */
+h1, h2, h3, h4, h5, h6, .brand-font {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--cy-text-dark);
+  letter-spacing: -0.02em;
+}
+
+/* Reglas de texto para fondos claros (garantizan lectura nítida) */
+p, li, span, td, div {
+  color: var(--cy-text-body);
+}
+
+.text-muted,
+.text-secondary {
+  color: #334155 !important; /* Contraste WCAG AAA > 7:1 contra blanco */
+}
+
+.lead {
+  color: #1e293b;
+  font-weight: 400;
+}
+
+/* =========================================================
+   1. HERO SECTION (Fondo Oscuro con Texto Blanco Nítido)
+   ========================================================= */
+.hero-gradient {
+  background-color: #0f172a !important;
+  background: 
+    radial-gradient(rgba(16, 185, 129, 0.22) 1.5px, transparent 1.5px),
+    linear-gradient(135deg, #0b1329 0%, #0f172a 45%, #064e3b 100%) !important;
+  background-size: 24px 24px, 100% 100% !important;
+  color: #ffffff !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Textos dentro de secciones oscuras - Siempre blancos o claros */
+.hero-gradient h1,
+.hero-gradient h2,
+.hero-gradient h3,
+.hero-gradient h4,
+.hero-gradient h5,
+.hero-gradient strong,
+.hero-gradient b {
+  color: #ffffff !important;
+}
+
+.hero-gradient p,
+.hero-gradient .lead,
+.hero-gradient .hero-lead {
+  color: #f1f5f9 !important;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.hero-gradient .text-success {
+  color: #34d399 !important; /* Verde esmeralda brillante de alto contraste */
+  font-weight: 800;
+}
+
+/* Tarjeta informativa en el Hero */
+.hero-info-card {
+  background: rgba(15, 23, 42, 0.92) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 16px;
+  color: #ffffff !important;
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.45);
+}
+
+.hero-info-card h3,
+.hero-info-card strong {
+  color: #ffffff !important;
+}
+
+.hero-info-card .card-subtitle-label {
+  color: #cbd5e1 !important;
+  font-weight: 500;
+}
+
+.hero-info-card .card-value-highlight {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+/* =========================================================
+   2. NAVBAR PERSONALIZADO
+   ========================================================= */
+.navbar-canchaya {
+  background-color: var(--cy-dark-nav);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 0.85rem 1rem;
+}
+
+.navbar-canchaya .navbar-brand {
+  color: #ffffff !important;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.navbar-canchaya .navbar-brand .logo-badge {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #fff;
+  border-radius: 10px;
+  padding: 6px 10px;
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-canchaya .nav-link {
+  color: #e2e8f0 !important;
+  font-weight: 500;
+  padding: 0.5rem 0.9rem !important;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.navbar-canchaya .nav-link:hover,
+.navbar-canchaya .nav-link.active {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================================
+   3. BOTONES DEPORTIVOS DE ALTO CONTRASTE
+   ========================================================= */
+.btn-canchaya-primary {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff !important;
+  border: none;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 0.65rem 1.4rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-canchaya-primary:hover,
+.btn-canchaya-primary:focus {
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(5, 150, 105, 0.45);
+}
+
+.btn-canchaya-outline {
+  border: 2px solid #059669;
+  color: #047857 !important;
+  font-weight: 700;
+  border-radius: 10px;
+  background: transparent;
+  padding: 0.6rem 1.3rem;
+  transition: all 0.2s ease;
+}
+
+.btn-canchaya-outline:hover,
+.btn-canchaya-outline:focus {
+  background: #059669;
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   4. TARJETAS Y CONTENEDORES (FONDOS BLANCOS / CLAROS)
+   ========================================================= */
+.card-canchaya {
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 8px -2px rgba(15, 23, 42, 0.03);
+  background-color: #ffffff !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-canchaya h2,
+.card-canchaya h3,
+.card-canchaya h4,
+.card-canchaya h5,
+.card-canchaya h6 {
+  color: #0f172a !important;
+}
+
+.card-canchaya p {
+  color: #334155 !important;
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -4px rgba(15, 23, 42, 0.12);
+}
+
+/* Tarjetas Informativas de Disciplinas Deportivas */
+.sport-card {
+  background-color: #ffffff !important;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+.sport-card h5 {
+  color: #0f172a !important;
+  font-weight: 700;
+}
+
+.sport-card p {
+  color: #334155 !important;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   5. FORMULARIOS, ETIQUETAS Y PLACEHOLDERS
+   ========================================================= */
+.form-label {
+  color: #0f172a !important;
+  font-weight: 700;
+  font-size: 0.92rem;
+  margin-bottom: 0.4rem;
+}
+
+.form-control,
+.form-select,
+.form-control-cy {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 1.5px solid #94a3b8 !important;
+  border-radius: 10px !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  padding: 0.65rem 1rem !important;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-control-cy:focus {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #059669 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25) !important;
+  outline: none !important;
+}
+
+/* Placeholders con excelente visibilidad y contraste */
+.form-control::placeholder,
+.form-control-cy::placeholder {
+  color: #64748b !important;
+  opacity: 1 !important;
+  font-weight: 400 !important;
+}
+
+.input-group-text {
+  background-color: #f1f5f9 !important;
+  color: #1e293b !important;
+  border: 1.5px solid #94a3b8 !important;
+  font-weight: 600 !important;
+}
+
+.form-text {
+  color: #475569 !important;
+  font-weight: 500 !important;
+  font-size: 0.85rem !important;
+}
+
+/* =========================================================
+   6. TABLAS (ADMINISTRACIÓN DE USUARIOS)
+   ========================================================= */
+.table {
+  color: #0f172a !important;
+}
+
+.table thead th {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.05em !important;
+  padding: 0.9rem 0.75rem !important;
+  border: none !important;
+}
+
+.table tbody tr td {
+  color: #1e293b !important;
+  font-weight: 500 !important;
+  padding: 0.85rem 0.75rem !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  vertical-align: middle !important;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f5f9 !important;
+}
+
+/* =========================================================
+   7. BADGES DE ROLES Y ESTADOS (WCAG AAA)
+   ========================================================= */
+.badge-rol-admin {
+  background-color: #fee2e2 !important;
+  color: #991b1b !important;
+  font-weight: 700 !important;
+  border: 1px solid #fca5a5 !important;
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem;
+}
+
+.badge-rol-propietario {
+  background-color: #fef3c7 !important;
+  color: #78350f !important;
+  font-weight: 700 !important;
+  border: 1px solid #fcd34d !important;
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem;
+}
+
+.badge-rol-cliente {
+  background-color: #e0f2fe !important;
+  color: #0369a1 !important;
+  font-weight: 700 !important;
+  border: 1px solid #7dd3fc !important;
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem;
+}
+
+.badge-estado-activo {
+  background-color: #dcfce7 !important;
+  color: #14532d !important;
+  font-weight: 700 !important;
+  border: 1px solid #86efac !important;
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem;
+}
+
+.badge-estado-inactivo {
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+  font-weight: 700 !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem;
+}
+
+/* =========================================================
+   8. FOOTER
+   ========================================================= */
+.footer-canchaya {
+  background-color: var(--cy-dark-nav);
+  color: #cbd5e1 !important;
+  margin-top: auto;
+  border-top: 2px solid #1e293b;
+}
+
+.footer-canchaya p,
+.footer-canchaya span,
+.footer-canchaya div {
+  color: #cbd5e1;
+}
+
+.footer-canchaya strong,
+.footer-canchaya .text-white {
+  color: #ffffff !important;
+}
+
+.footer-canchaya .text-muted {
+  color: #94a3b8 !important;
+}
+
+.footer-canchaya a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.footer-canchaya a:hover {
+  color: #34d399;
+}
+
+/* =========================================================
+   9. RESPONSIVE Y ACCESIBILIDAD
+   ========================================================= */
+@media (max-width: 768px) {
+  .hero-gradient {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  
+  .display-4 {
+    font-size: 2rem !important;
+  }
+}
